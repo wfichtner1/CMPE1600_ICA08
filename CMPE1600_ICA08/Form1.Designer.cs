@@ -52,6 +52,7 @@
             this.UI_LoadButton.TabIndex = 0;
             this.UI_LoadButton.Text = "Load File";
             this.UI_LoadButton.UseVisualStyleBackColor = true;
+            this.UI_LoadButton.Click += new System.EventHandler(this.UI_LoadButton_Click);
             // 
             // UI_LongRunButton
             // 
@@ -159,6 +160,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Data files|*.dat|Binary Files|*.bin|All Files|*.*\"";
             // 
             // Form1
             // 

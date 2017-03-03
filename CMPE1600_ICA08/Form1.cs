@@ -15,6 +15,8 @@ namespace CMPE1600_ICA08
     {
         List<Byte> byteList = new List<Byte>();
         int length = 0;
+        LongestRunForm longestDialog = new LongestRunForm();
+        bool runType = false;
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace CMPE1600_ICA08
                     {
                         length++;
                         byteList.Add(br.ReadByte());
-                        
+
                     }
                     br.Close();
                     fs.Close();
@@ -61,6 +63,119 @@ namespace CMPE1600_ICA08
             }
             UI_NumberOnes.Text = setCount.ToString();
         }
+
+        private void UI_LongRunButton_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == longestDialog.ShowDialog())
+            {
+                runType = longestDialog.RunType;
+                if (runType)
+                {
+                    LongRunCount();
+                }
+                else if (!runType)
+                {
+                    LongGapCount();
+                }
+            }
+        }
+        private void LongRunCount()
+        {
+            int state = 0;
+            int lengthCount = 0;
+            int longestRun = 0;
+            foreach (byte b in byteList)
+            {
+                for (int i = 0; i < 32; i++)
+                {
+                    if ((b & (1 << i)) == 0)
+                    {
+                        switch (state)
+                        {
+                            case 0:
+                                state = 0;
+                                break;
+                            case 1:
+                                state = 0;
+                                break;
+                        }
+                    }
+                    else if ((b & (1 << i)) > 0)
+                    {
+                        switch (state)
+                        {
+                            case 0:
+                                state = 1;
+                                lengthCount++;
+                                break;
+                            case 1:
+                                state = 1;
+                                lengthCount++;
+                                break;
+                        }
+
+                    }
+                }
+                if (lengthCount > longestRun)
+                {
+                    longestRun = lengthCount;
+                }
+                lengthCount = 0;
+            }
+
+            LongestRunLabel.Text = "Longest Run:";
+            UI_LongestRuns.Text = longestRun.ToString();
+        }
+        public void LongGapCount()
+        {
+            int state = 0;
+            int lengthCount = 0;
+            int longestGap = 0;
+            foreach (byte b in byteList)
+            {
+
+                for (int i = 0; i < 8; i++)
+                {
+                    if ((b & (1 << i)) > 0)
+                    {
+                        switch (state)
+                        {
+                            case 0:
+                                state = 0;
+                                break;
+                            case 1:
+                                state = 0;
+                                break;
+                        }
+                    }
+                    else if ((b & (1 << i)) == 0)
+                    {
+                        switch (state)
+                        {
+                            case 0:
+                                state = 1;
+                                lengthCount++;
+                                break;
+                            case 1:
+                                state = 1;
+                                lengthCount++;
+                                break;
+                        }
+
+                    }
+                }
+                if (lengthCount > longestGap)
+                {
+                    longestGap = lengthCount;
+                }
+                lengthCount = 0;
+            }
+
+            LongestRunLabel.Text = "Longest Gap:";
+            UI_LongestRuns.Text = longestGap.ToString();
+
+        }
+
 
     }
 }

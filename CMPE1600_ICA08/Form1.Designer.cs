@@ -46,9 +46,10 @@
             // 
             // UI_LoadButton
             // 
-            this.UI_LoadButton.Location = new System.Drawing.Point(12, 12);
+            this.UI_LoadButton.Location = new System.Drawing.Point(16, 15);
+            this.UI_LoadButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UI_LoadButton.Name = "UI_LoadButton";
-            this.UI_LoadButton.Size = new System.Drawing.Size(75, 23);
+            this.UI_LoadButton.Size = new System.Drawing.Size(100, 28);
             this.UI_LoadButton.TabIndex = 0;
             this.UI_LoadButton.Text = "Load File";
             this.UI_LoadButton.UseVisualStyleBackColor = true;
@@ -56,18 +57,21 @@
             // 
             // UI_LongRunButton
             // 
-            this.UI_LongRunButton.Location = new System.Drawing.Point(12, 160);
+            this.UI_LongRunButton.Location = new System.Drawing.Point(16, 197);
+            this.UI_LongRunButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UI_LongRunButton.Name = "UI_LongRunButton";
-            this.UI_LongRunButton.Size = new System.Drawing.Size(92, 23);
+            this.UI_LongRunButton.Size = new System.Drawing.Size(123, 28);
             this.UI_LongRunButton.TabIndex = 1;
             this.UI_LongRunButton.Text = "Longest Run";
             this.UI_LongRunButton.UseVisualStyleBackColor = true;
+            this.UI_LongRunButton.Click += new System.EventHandler(this.UI_LongRunButton_Click);
             // 
             // UI_NumberRunButton
             // 
-            this.UI_NumberRunButton.Location = new System.Drawing.Point(12, 189);
+            this.UI_NumberRunButton.Location = new System.Drawing.Point(16, 233);
+            this.UI_NumberRunButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UI_NumberRunButton.Name = "UI_NumberRunButton";
-            this.UI_NumberRunButton.Size = new System.Drawing.Size(92, 23);
+            this.UI_NumberRunButton.Size = new System.Drawing.Size(123, 28);
             this.UI_NumberRunButton.TabIndex = 2;
             this.UI_NumberRunButton.Text = "Number of Runs";
             this.UI_NumberRunButton.UseVisualStyleBackColor = true;
@@ -75,86 +79,96 @@
             // FileNameLabel
             // 
             this.FileNameLabel.AutoSize = true;
-            this.FileNameLabel.Location = new System.Drawing.Point(12, 53);
+            this.FileNameLabel.Location = new System.Drawing.Point(16, 65);
+            this.FileNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileNameLabel.Name = "FileNameLabel";
-            this.FileNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.FileNameLabel.Size = new System.Drawing.Size(73, 17);
             this.FileNameLabel.TabIndex = 3;
             this.FileNameLabel.Text = "File name:";
             // 
             // UI_FileName
             // 
             this.UI_FileName.AutoSize = true;
-            this.UI_FileName.Location = new System.Drawing.Point(110, 53);
+            this.UI_FileName.Location = new System.Drawing.Point(147, 65);
+            this.UI_FileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UI_FileName.Name = "UI_FileName";
-            this.UI_FileName.Size = new System.Drawing.Size(0, 13);
+            this.UI_FileName.Size = new System.Drawing.Size(0, 17);
             this.UI_FileName.TabIndex = 4;
             // 
             // FileLengthLabel
             // 
             this.FileLengthLabel.AutoSize = true;
-            this.FileLengthLabel.Location = new System.Drawing.Point(12, 79);
+            this.FileLengthLabel.Location = new System.Drawing.Point(16, 97);
+            this.FileLengthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FileLengthLabel.Name = "FileLengthLabel";
-            this.FileLengthLabel.Size = new System.Drawing.Size(62, 13);
+            this.FileLengthLabel.Size = new System.Drawing.Size(82, 17);
             this.FileLengthLabel.TabIndex = 5;
             this.FileLengthLabel.Text = "File Length:";
             // 
             // UI_FileLength
             // 
             this.UI_FileLength.AutoSize = true;
-            this.UI_FileLength.Location = new System.Drawing.Point(110, 79);
+            this.UI_FileLength.Location = new System.Drawing.Point(147, 97);
+            this.UI_FileLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UI_FileLength.Name = "UI_FileLength";
-            this.UI_FileLength.Size = new System.Drawing.Size(0, 13);
+            this.UI_FileLength.Size = new System.Drawing.Size(0, 17);
             this.UI_FileLength.TabIndex = 6;
             // 
             // OnesLabel
             // 
             this.OnesLabel.AutoSize = true;
-            this.OnesLabel.Location = new System.Drawing.Point(12, 105);
+            this.OnesLabel.Location = new System.Drawing.Point(16, 129);
+            this.OnesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OnesLabel.Name = "OnesLabel";
-            this.OnesLabel.Size = new System.Drawing.Size(85, 13);
+            this.OnesLabel.Size = new System.Drawing.Size(113, 17);
             this.OnesLabel.TabIndex = 7;
             this.OnesLabel.Text = "Number of ones:";
             // 
             // UI_NumberOnes
             // 
             this.UI_NumberOnes.AutoSize = true;
-            this.UI_NumberOnes.Location = new System.Drawing.Point(110, 105);
+            this.UI_NumberOnes.Location = new System.Drawing.Point(147, 129);
+            this.UI_NumberOnes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UI_NumberOnes.Name = "UI_NumberOnes";
-            this.UI_NumberOnes.Size = new System.Drawing.Size(0, 13);
+            this.UI_NumberOnes.Size = new System.Drawing.Size(0, 17);
             this.UI_NumberOnes.TabIndex = 8;
             // 
             // UI_LongestRuns
             // 
             this.UI_LongestRuns.AutoSize = true;
-            this.UI_LongestRuns.Location = new System.Drawing.Point(228, 165);
+            this.UI_LongestRuns.Location = new System.Drawing.Point(304, 203);
+            this.UI_LongestRuns.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UI_LongestRuns.Name = "UI_LongestRuns";
-            this.UI_LongestRuns.Size = new System.Drawing.Size(0, 13);
+            this.UI_LongestRuns.Size = new System.Drawing.Size(0, 17);
             this.UI_LongestRuns.TabIndex = 9;
             // 
             // LongestRunLabel
             // 
             this.LongestRunLabel.AutoSize = true;
-            this.LongestRunLabel.Location = new System.Drawing.Point(110, 165);
+            this.LongestRunLabel.Location = new System.Drawing.Point(147, 203);
+            this.LongestRunLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LongestRunLabel.Name = "LongestRunLabel";
-            this.LongestRunLabel.Size = new System.Drawing.Size(112, 13);
+            this.LongestRunLabel.Size = new System.Drawing.Size(93, 17);
             this.LongestRunLabel.TabIndex = 10;
-            this.LongestRunLabel.Text = "Longest run of zeroes:";
+            this.LongestRunLabel.Text = "Longest Run:";
             // 
             // RunLengthLabel
             // 
             this.RunLengthLabel.AutoSize = true;
-            this.RunLengthLabel.Location = new System.Drawing.Point(110, 194);
+            this.RunLengthLabel.Location = new System.Drawing.Point(147, 239);
+            this.RunLengthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RunLengthLabel.Name = "RunLengthLabel";
-            this.RunLengthLabel.Size = new System.Drawing.Size(92, 13);
+            this.RunLengthLabel.Size = new System.Drawing.Size(121, 17);
             this.RunLengthLabel.TabIndex = 11;
             this.RunLengthLabel.Text = "Runs of Length 0:";
             // 
             // UI_RunLength
             // 
             this.UI_RunLength.AutoSize = true;
-            this.UI_RunLength.Location = new System.Drawing.Point(222, 194);
+            this.UI_RunLength.Location = new System.Drawing.Point(296, 239);
+            this.UI_RunLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UI_RunLength.Name = "UI_RunLength";
-            this.UI_RunLength.Size = new System.Drawing.Size(0, 13);
+            this.UI_RunLength.Size = new System.Drawing.Size(0, 17);
             this.UI_RunLength.TabIndex = 12;
             // 
             // openFileDialog1
@@ -164,9 +178,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(379, 321);
             this.Controls.Add(this.UI_RunLength);
             this.Controls.Add(this.RunLengthLabel);
             this.Controls.Add(this.LongestRunLabel);
@@ -180,6 +194,7 @@
             this.Controls.Add(this.UI_NumberRunButton);
             this.Controls.Add(this.UI_LongRunButton);
             this.Controls.Add(this.UI_LoadButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
